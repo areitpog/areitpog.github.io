@@ -19,8 +19,8 @@
 /* == MAIN == */
 h1 {
   font-family: ashley;
-  font-size: 96px;
-  margin-bottom: 0;
+  font-size: 11vmin;
+  margin-bottom: 1vmin;
   margin-top: 12px;
 }
 body {
@@ -33,7 +33,7 @@ body {
 }
 .nofont {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 32px;
+  font-size: 5vmin;
   font-weight: 400;
   line-height: 0;
 }
@@ -56,7 +56,7 @@ body {
   padding: 10px 16px;
   transition: 0.3s;
   font-family: opendyslexic;
-  font-size: 2vmax;
+  font-size: 24px;
 }
 .tab button:hover {
   background-color: #8d7665;
