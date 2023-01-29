@@ -59,6 +59,7 @@ body {
   font-size: 3.5vmin;
   user-select: none;
   -moz-user-select: none;
+  -webkit-tap-highlight-color: transparent;
 }
 .tab button:hover {
   background-color: #8d7665;
