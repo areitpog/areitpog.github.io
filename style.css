@@ -56,7 +56,9 @@ body {
   padding: 10px 16px;
   transition: 0.3s;
   font-family: opendyslexic;
-  font-size: 24px;
+  font-size: 3.5vmin;
+  user-select: none;
+  -moz-user-select: none;
 }
 .tab button:hover {
   background-color: #8d7665;
