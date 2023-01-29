@@ -1,0 +1,98 @@
+/*
+
+    #4a8853 , #427A4B
+    
+    green: #B2E6D4 , #689689 , #83E8BA , #293833
+    brown: #A49E8D , #504136
+    brown ext.: #b1aa98 #8d7665 #614d3f #504136
+
+*/
+
+@main_02: #f2ffee;
+@main_01: #9aceb0;
+@main_00: #0e190e;
+
+@accent_03: #b1aa98;
+@accent_02: #8d7665;
+@accent_01: #614d3f;
+@accent_00: #504136;
+
+/* == FONTS == */
+@font-face {
+    font-family: opendyslexic;
+    src: url(fonts/OpenDyslexic-Regular.otf);
+}
+@font-face {
+    font-family: ashley;
+    src: url(fonts/ashleysfont2.ttf);
+}
+
+/* == MAIN == */
+h1 {
+    font-family: ashley;
+    font-size: 10vmax;
+    margin-bottom: 0;
+    margin-top: 12px;
+}
+
+body {
+    font-family: opendyslexic;
+    color: @main_00;
+    font-size: 2vmax;
+
+    background-color: @main_01;
+    /*background-image: url('bgdark.png');*/
+    /*background-size: 200vh;*/
+    
+}
+
+.nofont {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 3vmax;
+    font-weight: 400;
+    line-height: 0;
+}
+
+/* == TABS == */
+.tab {
+    background-color: @accent_03;
+    overflow: hidden;
+
+    border: 5px solid @accent_00;
+
+    margin-top: -8px;
+    margin-bottom: 0px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.tabbuttons {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 16px;
+    transition: 0.3s;
+
+    font-family: opendyslexic;
+    font-size: 2vmax;
+}
+
+.tab button:hover {
+    background-color: @accent_02;
+}
+
+.tab button.active {
+    background-color: @accent_01;
+    color: @accent_03;
+}
+
+.tabcontent {
+    display: none;
+
+    background-color: @main_02;
+
+    padding: 6px 16px;
+    //border-top: none;
+}
