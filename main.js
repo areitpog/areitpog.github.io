@@ -2,10 +2,11 @@ document.getElementById("defaultTab").click();
 
 function showTab(evt, tabName) {
     var i, tabcontent, tabbuttons;
-
+    
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
       tabcontent[i].style.display = "none";
+      tabcontent[i].classList.remove("movein");
     }
 
     tabbuttons = document.getElementsByClassName("tabbuttons");

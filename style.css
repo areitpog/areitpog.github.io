@@ -6,6 +6,17 @@
     brown: #A49E8D , #504136
     brown ext.: #b1aa98 #8d7665 #614d3f #504136
 
+
+
+@main_02: #f2ffee;
+@main_01: #9aceb0;
+@main_00: #0e190e;
+
+@accent_03: #b1aa98;
+@accent_02: #8d7665;
+@accent_01: #614d3f;
+@accent_00: #504136;
+
 */
 /* == FONTS == */
 @font-face {
@@ -25,9 +36,9 @@ h1 {
 }
 body {
   font-family: opendyslexic;
-  color: #0e190e;
+  color: #ececec;
   font-size: 21px;
-  background-color: #9aceb0;
+  background-color: #000300;
   /*background-image: url('bgdark.png');*/
   /*background-size: 200vh;*/
 }
@@ -39,9 +50,12 @@ body {
 }
 /* == TABS == */
 .tab {
-  background-color: #b1aa98;
+  background-color: #000200;
   overflow: hidden;
-  border: 5px solid #504136;
+  border: 5px solid #29a718;
+  border-right: 0px;
+  border-left: 0px;
+  border-bottom: 0px;
   margin-top: -8px;
   margin-bottom: 0px;
   margin-left: -8px;
@@ -49,6 +63,7 @@ body {
 }
 .tabbuttons {
   background-color: inherit;
+  color: #29a718;
   float: left;
   border: none;
   outline: none;
@@ -56,20 +71,32 @@ body {
   padding: 10px 16px;
   transition: 0.3s;
   font-family: opendyslexic;
-  font-size: 3.5vmin;
+  font-size: 3vmin;
   user-select: none;
   -moz-user-select: none;
   -webkit-tap-highlight-color: transparent;
 }
 .tab button:hover {
-  background-color: #8d7665;
+  background-color: #042500;
 }
 .tab button.active {
-  background-color: #614d3f;
-  color: #b1aa98;
+  background-color: #0e3508;
+  color: #30d31a;
 }
 .tabcontent {
   display: none;
-  background-color: #f2ffee;
-  padding: 6px 16px;
+  background-color: #000200;
+  padding: 32px 16px;
+  margin: 16px 0px;
+  transition: all 1s;
+  animation: fadeEffect 0.75s;
+}
+@keyframes fadeEffect {
+  from {
+    transform: translateX(-25%);
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
