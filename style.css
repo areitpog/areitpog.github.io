@@ -93,10 +93,15 @@ body {
 }
 @keyframes fadeEffect {
   from {
-    transform: translateX(-25%);
+    transform: translateY(7%);
     opacity: 0;
   }
   to {
     opacity: 1;
   }
+}
+.pfp {
+  position: relative;
+  top: -166px;
+  margin-bottom: -128px;
 }
