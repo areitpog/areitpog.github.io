@@ -11,60 +11,58 @@
 
     <title>Areit</title>
 </head>
-<body>
-
-    <div class="tab">
-        <button class="tabbuttons" onclick="showTab(event, 'Home')" id="defaultTab">Home</button>
-        <button class="tabbuttons" onclick="showTab(event, 'Music')">Music</button>
-        <button class="tabbuttons" onclick="showTab(event, 'Apps')">Apps</button>
-        <button class="tabbuttons" onclick="showTab(event, 'Contact')">Contact</button>
-    </div>
-      
-    <div id="Home" class="tabcontent">
-
+<body id="main">
+    <div id="banner">
         <img src="banner_strip.png", width="100%", height="100">
         <img src="areit_bgless.png", class="pfp", height="100">
+    </div>
+
+    <section class="hidden">
         <h1>Hi, I'm areit!</h1>
         <div class="nofont">[ʌ'reɪt]</div>
+        <br>
+    </section>
 
+    <section class="hidden pause">
+            I'm a hobbyist programmer/gamedev and music producer.
         <br>
-        I'm a hobbyist programmer/gamedev and music producer.
-        <br>
-        This website is basically my portfolio, so have a look around I guess?
+            This website is basically my portfolio, so have a look around I guess?
         <br><br>
-        Currently a work in progress :)
-    </div>
+            Currently a work in progress :)
+        <br><br>
+    </section>
 
-      
-    <div id="Music" class="tabcontent">
+    <section class="hidden pause">
         <h1>Music</h1>
-        <p>
-            I mostly make music for my own games, but sometimes I make music for fun;
-            <br>
-            Here are some pieces by me:
-        </p> 
+            <p>
+                I mostly make music for my own games, but sometimes I make music for fun;
+                <br>
+                Here are some pieces by me:
+            </p>
 
-        <iframe width="540" height="315" src="https://www.youtube.com/embed/eISpH_G5vbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="540" height="315" src="https://www.youtube.com/embed/7tN9dYuxbWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
-    
-    <div id="Apps" class="tabcontent">
+        <!--
+            <iframe class="vid hidden" style="--order: 1;" width="540" height="315" src="https://www.youtube.com/embed/eISpH_G5vbk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="vid hidden" style="--order: 2;" width="540" height="315" src="https://www.youtube.com/embed/7tN9dYuxbWc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        -->
+
+        <audio controls class="hidden" style="--order: 1;"> <source src="music/air_resistance.mp3" type="audio/mpeg"> Something went wrong :( </audio>
+        <audio controls class="hidden" style="--order: 1;"> <source src="music/funky.wav" type="audio/wav"> Something went wrong :( </audio>
+    </section>
+
+    <section class="hidden pause">
         <h1>Apps</h1>
-        <p>
-            I like coding in my free time (mainly C#, occasionally Python)
+            <p>
+                I like coding in my free time (mainly C#, occasionally Python)
+                <br>
+                Here are some things I've made:
+            </p>
             <br>
-            Here are some things I've made:
-        </p>
-        <br><br><br><br><br>
-    </div>
+    </section>
 
-    <div id="Contact" class="tabcontent">
+    <section class="hidden pause">
         <h1>Contact</h1>
-        <p>To contact me you should simply</p>
-        <br><br><br><br><br><br>
-    </div>
+            <p>To contact me you should simply</p>
+    </section>
 
-    <div class="spacer layer1"></div>
-    
 </body>
 </html>
