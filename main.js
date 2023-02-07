@@ -1,4 +1,5 @@
 document.getElementById("defaultTab").click();
+document.body.onscroll += onScroll;
 
 function showTab(evt, tabName) {
     var i, tabcontent, tabbuttons;
@@ -15,4 +16,8 @@ function showTab(evt, tabName) {
 
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
+}
+
+function onScroll() {
+
 }

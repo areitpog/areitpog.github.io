@@ -85,6 +85,8 @@ body {
     margin-bottom: 0px;
     margin-left: -8px;
     margin-right: -8px;
+
+    //position: fixed;
 }
 
 .tabbuttons {
@@ -143,4 +145,25 @@ body {
     top: -166px;
 
     margin-bottom: -128px;
+}
+
+/* == CURVES == */
+
+.spacer {
+    aspect-ratio: 960/360;
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    transform: rotate(180deg);
+    overflow: hidden;
+    line-height: 0;
+
+    position: fixed;
+    bottom: 0;
+}
+
+.layer1 {
+    background-image: url('wavesOpacity.svg');
 }
