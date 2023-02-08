@@ -38,10 +38,14 @@ body {
   font-family: opendyslexic;
   color: #ececec;
   font-size: 21px;
-  animation: fadeEffect 1s;
-  transition: 1s;
+}
+#main::before {
+  content: "";
+  background-position: fixed;
+  height: 200%;
+  z-index: -2;
   background: black;
-  background: linear-gradient(0deg, #073b23 50%, #0f6e42 100%);
+  background-image: radial-gradient(circle at -30%, #073b23 30%, #0f6e42 70%);
 }
 .nofont {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

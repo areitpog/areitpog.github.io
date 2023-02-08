@@ -46,12 +46,24 @@ body {
 
     font-size: 21px;
 
-    animation: fadeEffect 1s;
-    transition: 1s;
+    //animation: fadeEffect 1s;
+    //transition: 1s;
     
-    background: black;
-    background: linear-gradient(0deg, @main_bg_color 50%, @gradient_color 100%);
+    //background-size: 200% 200%;
+
 }
+
+#main::before {
+    content: "";
+    background-position: fixed;
+    height: 200%;
+    z-index: -2;
+
+    background: black;
+    background-image: radial-gradient(circle at -30%, @main_bg_color 30%, @gradient_color 70%);
+}
+
+
 .nofont {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     //font-size: 3vmax;

@@ -16,10 +16,10 @@ function onScroll() {
 
 
   var colScroll = clamp(scroll * 0.0009, 0, 1);
-  var minColor = lerpColor("#073b23", "#fd1d1d", colScroll);
-  var maxColor = lerpColor("#0f6e42", "#fcb045", colScroll);
+  var minColor = lerpColor(0x073b23, 0xfd1d1d, colScroll);
+  var maxColor = lerpColor(0x0f6e42, 0xfcb045, colScroll);
 
-  main.style.background =
+  main.style.backgroundImage =
     `radial-gradient(circle at ${scroll * 0.1 - 30}%, ${minColor} 30%, ${maxColor} 70%)`;
 }
 
@@ -55,6 +55,22 @@ function lerp(start, end, amt) {
 }
 
 function lerpColor(a, b, amount) { 
+  const ar = (a & 0xFF0000) >> 16,
+  ag = (a & 0x00FF00) >> 8,
+  ab = (a & 0x0000FF),
+
+  br = (b & 0xFF0000) >> 16,
+  bg = (b & 0x00FF00) >> 8,
+  bb = (b & 0x0000FF),
+
+  rr = ar + amount * (br - ar),
+  rg = ag + amount * (bg - ag),
+  rb = ab + amount * (bb - ab);
+  
+  return `#${((rr << 16) + (rg << 8) + (rb | 0)).toString(16).padStart(6, '0').slice(-6)}`
+}
+
+function lerpColorOld(a, b, amount) { 
   var ah = parseInt(a.replace(/#/g, ''), 16),
       ar = ah >> 16, ag = ah >> 8 & 0xff, ab = ah & 0xff,
       bh = parseInt(b.replace(/#/g, ''), 16),
