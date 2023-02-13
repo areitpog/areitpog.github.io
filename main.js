@@ -1,26 +1,13 @@
-
 document.body.onscroll = onScroll;
 onScroll();
 
-// Actual code
-
-var scrollAmnt = 0;
 function onScroll() {
   var scroll = document.documentElement.scrollTop;
 
-  let main = document.getElementById("main");
   let banner = document.getElementById("banner");
 
-  banner.style.transform = `translateY(${scroll * 0.3}px)`;
-  banner.style.opacity = `${(100 - scroll) / 100}`;
-
-
-  var colScroll = clamp(scroll * 0.0009, 0, 1);
-  var minColor = lerpColor(0x073b23, 0xfd1d1d, colScroll);
-  var maxColor = lerpColor(0x0f6e42, 0xfcb045, colScroll);
-
-  main.style.backgroundImage =
-    `radial-gradient(circle at ${scroll * 0.1 - 30}%, ${minColor} 30%, ${maxColor} 70%)`;
+  banner.style.transform = `translateY(${scroll * 0.5}px)`;
+  banner.style.opacity = `${(150 - scroll) / 150}`;
 }
 
 let observer = null;
@@ -37,6 +24,21 @@ observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

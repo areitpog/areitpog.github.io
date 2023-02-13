@@ -27,6 +27,10 @@
   font-family: ashley;
   src: url(fonts/ashleysfont2.ttf);
 }
+@font-face {
+  font-family: mono;
+  src: url(fonts/MartianMono-Medium.ttf);
+}
 /* == MAIN == */
 h1 {
   font-family: ashley;
@@ -35,27 +39,68 @@ h1 {
   margin-top: 12px;
 }
 body {
+  background-color: #111;
+}
+#gradient {
   font-family: opendyslexic;
   color: #ececec;
   font-size: 21px;
+  background-attachment: fixed;
+  background: linear-gradient(228deg, #073b23, #0f6e42, #fd1d1d, #fcb045);
+  background-position: 100% 50%;
+  background-size: 400% 400%;
 }
-#main::before {
-  content: "";
-  background-position: fixed;
-  height: 200%;
-  z-index: -2;
-  background: black;
-  background-image: radial-gradient(circle at -30%, #073b23 30%, #0f6e42 70%);
+section {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  text-align: center;
 }
-.nofont {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+.terminal {
+  font-family: mono;
+  color: #ececec;
+  margin-bottom: 10px;
+  font-size: 6vmin;
+  display: flex;
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.1em;
+  width: 11.1em;
+  border-right: 0.7em solid #ececec;
+  animation: typing 2s steps(14, end), blink-caret 1s step-end 2s infinite;
+}
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 11.1em;
+  }
+}
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: #ececec;
+  }
+  50% {
+    border-color: transparent;
+  }
+}
+.comment {
+  color: #555;
+  margin-top: 1.7vmin;
+  font-family: mono;
   font-size: 5vmin;
-  font-weight: 400;
-  line-height: 4vw;
-  margin-bottom: 50px;
+}
+.linenum {
+  color: #20381f;
+  font-family: mono;
+  font-size: 6vmin;
+  margin-right: 1em;
+  float: left;
 }
 .pause {
-  margin-bottom: 20vw;
+  margin-bottom: 20vh;
 }
 @keyframes fadeEffect {
   from {
@@ -65,15 +110,9 @@ body {
     opacity: 1;
   }
 }
-section {
-  display: grid;
-  place-items: center;
-  align-content: center;
-  text-align: center;
-}
 .pfp {
   position: relative;
-  top: -165px;
+  top: -146px;
   margin-bottom: -128px;
 }
 @media (prefers-reduced-motion: no-preference) {
