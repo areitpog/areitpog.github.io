@@ -31,30 +31,75 @@
   font-family: mono;
   src: url(fonts/MartianMono-Medium.ttf);
 }
+@font-face {
+  font-family: monolight;
+  src: url(fonts/MartianMono-Light.ttf);
+}
 /* == MAIN == */
 h1 {
   font-family: ashley;
   font-size: 11vmin;
   margin-bottom: 1vmin;
-  margin-top: 12px;
 }
 body {
   background-color: #111;
+  font-family: monolight;
+  overflow-x: hidden;
+  font-size: 3vmin;
 }
 #gradient {
-  font-family: opendyslexic;
   color: #ececec;
-  font-size: 21px;
+  padding-left: 3vmin;
+  padding-right: 2vmin;
+  padding-bottom: 16vmin;
+  padding-top: 3vmin;
   background-attachment: fixed;
   background: linear-gradient(228deg, #073b23, #0f6e42, #fd1d1d, #fcb045);
   background-position: 100% 50%;
   background-size: 400% 400%;
+  animation: gradient ease 10s  infinite;
+  -webkit-animation: gradient ease 10s  infinite;
+  -moz-animation: gradient ease 10s  infinite;
+}
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@-moz-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 section {
   display: grid;
   place-items: center;
-  align-content: center;
-  text-align: center;
+}
+.nofont {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 .terminal {
   font-family: mono;
@@ -88,9 +133,10 @@ section {
 }
 .comment {
   color: #555;
-  margin-top: 1.7vmin;
-  font-family: mono;
-  font-size: 5vmin;
+  margin-top: -0.7vmin;
+  font-family: monolight;
+  font-size: 6vmin;
+  overflow: hidden;
 }
 .linenum {
   color: #20381f;
@@ -98,9 +144,6 @@ section {
   font-size: 6vmin;
   margin-right: 1em;
   float: left;
-}
-.pause {
-  margin-bottom: 20vh;
 }
 @keyframes fadeEffect {
   from {
@@ -112,23 +155,18 @@ section {
 }
 .pfp {
   position: relative;
-  top: -146px;
+  float: left;
+  top: -104px;
   margin-bottom: -128px;
 }
 @media (prefers-reduced-motion: no-preference) {
-  .hidden {
+  .hidden1 {
     opacity: 0;
-    filter: blur(5px);
-    transform: translateX(-5%);
-    transition: all 0.75s;
-    transition-delay: 100ms;
+    transform: translateY(10%);
+    transition: all 0.1s ease calc(100ms + 100ms * var(--order));
   }
 }
 .show {
   opacity: 1;
-  filter: blur(0px);
   transform: translateX(0);
-}
-audio {
-  transition-delay: calc(100ms + 100ms * var(--order));
 }

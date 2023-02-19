@@ -6,8 +6,18 @@ function onScroll() {
 
   let banner = document.getElementById("banner");
 
-  banner.style.transform = `translateY(${scroll * 0.5}px)`;
+  //banner.style.transform = `translateY(${scroll * 0.5}px)`;
   banner.style.opacity = `${(150 - scroll) / 150}`;
+
+  hiddenElements = document.querySelectorAll(".hidden1");
+  //hiddenElements = document.getElementsByClassName("hidden");
+
+  if (scroll > 400) {
+    hiddenElements.forEach((el) => el.classList.add("show"));
+  }
+  else {
+    hiddenElements.forEach((el) => el.classList.remove("show"));
+  }
 }
 
 let observer = null;
@@ -22,8 +32,8 @@ observer = new IntersectionObserver((entries) => {
   });
 });
 
-const hiddenElements = document.querySelectorAll(".hidden");
-hiddenElements.forEach((el) => observer.observe(el));
+//const hiddenElements = document.querySelectorAll(".hidden");
+//hiddenElements.forEach((el) => observer.observe(el));
 
 
 
