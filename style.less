@@ -58,26 +58,26 @@ body {
     font-family: monolight;
     overflow-x: hidden;
     font-size: 3vmin;
+    
+    color: @main_font_color;
 }
+
 #gradient {
     //font-family: opendyslexic;
-    color: @main_font_color;
-
-    //font-size: 21px;
 
     padding-left: 3vmin;
     padding-right: 2vmin; 
     padding-bottom: 16vmin;
-    padding-top: 3vmin;
+    padding-top: 4vmin;
     background-attachment: fixed;
 
     background: linear-gradient(228deg, @green_gradient_A, @green_gradient_B, @red_gradient_A, @red_gradient_B);
     background-position: 100% 50%;
     background-size: 400% 400%;
 
-    animation: gradient ease 10s  infinite; 
-    -webkit-animation: gradient ease 10s  infinite; 
-    -moz-animation: gradient ease 10s  infinite; 
+    animation: gradient ease 10s infinite; 
+    -webkit-animation: gradient ease 10s infinite; 
+    -moz-animation: gradient ease 10s infinite; 
 }
 @-webkit-keyframes gradient {
     0%{background-position:0% 50%}
@@ -94,6 +94,76 @@ body {
     50%{background-position:100% 50%}
     100%{background-position:0% 50%}
 }
+
+@-webkit-keyframes gradientUp {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 0%}
+}
+@-moz-keyframes gradientUp {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 0%}
+}
+@keyframes gradientUp {
+    0%{background-position:0% 0%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 0%}
+}
+
+#gradient2 {
+    //font-family: opendyslexic;
+
+    padding-left: 3vmin;
+    padding-right: 2vmin; 
+    padding-bottom: 16vmin;
+    padding-top: 4vmin;
+    background-attachment: fixed;
+
+    background: linear-gradient(-80deg,  #2d89c7, #2bb6c5, #a336e1, #ed36ee);
+    background-position: 100% 50%;
+    background-size: 400% 400%;
+
+    animation: gradient ease 10s infinite; 
+    -webkit-animation: gradient ease 10s infinite; 
+    -moz-animation: gradient ease 10s infinite; 
+}
+
+#gradient3 {
+    //font-family: opendyslexic;
+
+    padding-left: 3vmin;
+    padding-right: 2vmin; 
+    padding-bottom: 16vmin;
+    padding-top: 4vmin;
+    background-attachment: fixed;
+
+    background: linear-gradient(45deg,  #303233 30%, #626b6d, #7d8688, #3a3a3a);
+    background-position: 0% 100%; 
+    background-size: 400% 400%; 
+
+    animation: gradientUp ease 5s infinite; 
+    -webkit-animation: gradientUp ease 5s infinite; 
+    -moz-animation: gradientUp ease 5s infinite; 
+}
+
+#arrow {
+    position: fixed;
+    z-index: 1; 
+
+    cursor: pointer;
+    background-color: transparent; 
+    border: 0;
+
+    background-image: url("arrow.png");
+    background-size: cover;
+
+    width:50px;
+	height:50px;
+	bottom:40px;
+	right:40px; 
+}
+
 
 section {
     display: grid;
@@ -179,7 +249,7 @@ section {
         opacity: 0;
         //filter: blur(5px); 
         transform: translateY(10%);
-        transition: all 0.2s ease calc(100ms + 100ms * var(--order));
+        transition: all 0.2s ease 0ms; 
     }
 }
 
@@ -187,6 +257,8 @@ section {
     opacity: 1;
     //filter: blur(0px);
     transform: translateX(0);
+    
+    transition: all 0.2s ease calc(100ms + 75ms * var(--order));
     //transition: all 0.5s ease calc(100ms + 100ms * var(--order)); 
     //calc(100ms + 100ms * var(--order));
 }

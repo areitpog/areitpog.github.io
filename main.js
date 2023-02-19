@@ -20,6 +20,11 @@ function onScroll() {
   }
 }
 
+function moveDown() {
+  window.scrollTo({ top: 3 * window.screen.height, behavior: 'smooth' });
+}
+
+/*
 let observer = null;
 observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -32,9 +37,9 @@ observer = new IntersectionObserver((entries) => {
   });
 });
 
-//const hiddenElements = document.querySelectorAll(".hidden");
-//hiddenElements.forEach((el) => observer.observe(el));
-
+const hiddenElements = document.querySelectorAll(".hidden");
+hiddenElements.forEach((el) => observer.observe(el));
+*/
 
 
 
