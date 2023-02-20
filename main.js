@@ -9,14 +9,32 @@ function onScroll() {
   //banner.style.transform = `translateY(${scroll * 0.5}px)`;
   banner.style.opacity = `${(150 - scroll) / 150}`;
 
-  hiddenElements = document.querySelectorAll(".hidden1");
+  hiddenElements1 = document.querySelectorAll(".hidden1");
+  hiddenElements2 = document.querySelectorAll(".hidden2");
+  hiddenElements3 = document.querySelectorAll(".hidden3");
   //hiddenElements = document.getElementsByClassName("hidden");
 
-  if (scroll > 400) {
-    hiddenElements.forEach((el) => el.classList.add("show"));
+  if (scroll > 500) {
+    hiddenElements1.forEach((el) => el.classList.add("show"));
   }
   else {
-    hiddenElements.forEach((el) => el.classList.remove("show"));
+    hiddenElements1.forEach((el) => el.classList.remove("show"));
+  }
+
+
+  if (scroll > 1500) {
+    hiddenElements2.forEach((el) => el.classList.add("show"));
+  }
+  else {
+    hiddenElements2.forEach((el) => el.classList.remove("show"));
+  }
+
+
+  if (scroll > 2500) {
+    hiddenElements3.forEach((el) => el.classList.add("show"));
+  }
+  else {
+    hiddenElements3.forEach((el) => el.classList.remove("show"));
   }
 }
 

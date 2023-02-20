@@ -251,14 +251,26 @@ section {
         transform: translateY(10%);
         transition: all 0.2s ease 0ms; 
     }
+    .hidden2 {
+        opacity: 0;
+        //filter: blur(5px); 
+        transform: translateY(10%);
+        transition: all 0.2s ease 0ms; 
+    }
+    .hidden3 {
+        opacity: 0;
+        //filter: blur(5px); 
+        transform: translateY(10%);
+        transition: all 0.2s ease 0ms; 
+    }
 }
 
 .show {
     opacity: 1;
     //filter: blur(0px);
     transform: translateX(0);
-    
-    transition: all 0.2s ease calc(100ms + 75ms * var(--order));
+
+    transition: all 0.2s ease calc(100ms + 80ms * var(--order));
     //transition: all 0.5s ease calc(100ms + 100ms * var(--order)); 
     //calc(100ms + 100ms * var(--order));
 }

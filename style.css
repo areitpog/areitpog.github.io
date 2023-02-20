@@ -237,9 +237,19 @@ section {
     transform: translateY(10%);
     transition: all 0.2s ease 0ms;
   }
+  .hidden2 {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: all 0.2s ease 0ms;
+  }
+  .hidden3 {
+    opacity: 0;
+    transform: translateY(10%);
+    transition: all 0.2s ease 0ms;
+  }
 }
 .show {
   opacity: 1;
   transform: translateX(0);
-  transition: all 0.2s ease calc(100ms + 75ms * var(--order));
+  transition: all 0.2s ease calc(100ms + 80ms * var(--order));
 }
