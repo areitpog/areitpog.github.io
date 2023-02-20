@@ -48,7 +48,7 @@ body {
   font-size: 3vmin;
   color: #ececec;
 }
-#gradient {
+#gradient1 {
   padding-left: 3vmin;
   padding-right: 2vmin;
   padding-bottom: 16vmin;
@@ -57,6 +57,7 @@ body {
   background: linear-gradient(228deg, #073b23, #0f6e42, #fd1d1d, #fcb045);
   background-position: 100% 50%;
   background-size: 400% 400%;
+  border-radius: 16px;
   animation: gradient ease 10s infinite;
   -webkit-animation: gradient ease 10s infinite;
   -moz-animation: gradient ease 10s infinite;
@@ -136,6 +137,7 @@ body {
   background: linear-gradient(-80deg, #2d89c7, #2bb6c5, #a336e1, #ed36ee);
   background-position: 100% 50%;
   background-size: 400% 400%;
+  border-radius: 16px;
   animation: gradient ease 10s infinite;
   -webkit-animation: gradient ease 10s infinite;
   -moz-animation: gradient ease 10s infinite;
@@ -149,6 +151,7 @@ body {
   background: linear-gradient(45deg, #303233 30%, #626b6d, #7d8688, #3a3a3a);
   background-position: 0% 100%;
   background-size: 400% 400%;
+  border-radius: 16px;
   animation: gradientUp ease 5s infinite;
   -webkit-animation: gradientUp ease 5s infinite;
   -moz-animation: gradientUp ease 5s infinite;
