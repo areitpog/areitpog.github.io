@@ -5,9 +5,19 @@ function onScroll() {
   var scroll = document.documentElement.scrollTop;
 
   let banner = document.getElementById("banner");
+  let arrow = document.getElementById("arrow");
 
   //banner.style.transform = `translateY(${scroll * 0.5}px)`;
   banner.style.opacity = `${(150 - scroll) / 150}`;
+
+  var arrowOpacity = (200 - scroll) / 200;
+  
+  if (arrowOpacity < 0.1)
+  {
+    arrowOpacity = 0.1;
+  }
+
+  arrow.style.opacity = `${arrowOpacity}`;
 
   hiddenElements1 = document.querySelectorAll(".hidden1");
   hiddenElements2 = document.querySelectorAll(".hidden2");
