@@ -49,7 +49,7 @@ function onScroll() {
 }
 
 function moveDown() {
-  window.scrollTo({ top: 3 * window.screen.height, behavior: 'smooth' });
+  window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
 }
 
 /*
