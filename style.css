@@ -254,5 +254,5 @@ section {
 .show {
   opacity: 1;
   transform: translateX(0);
-  transition: all 0.2s ease calc(100ms + 80ms * var(--order));
+  transition: all 0.2s ease calc(80ms * var(--order));
 }
