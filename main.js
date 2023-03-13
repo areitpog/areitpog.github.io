@@ -19,30 +19,39 @@ function onScroll() {
 
   arrow.style.opacity = `${arrowOpacity}`;
 
-  /*
   for (let i = 1; i <= 3; i++) {
     hiddenElements = document.querySelectorAll(`.hidden${i}`);
     gradient = document.querySelector(`#gradient${i}`);
-    scrollTrigger = gradient.scrollTop + gradient.offsetHeight;
+    scrollTrigger = gradient.getBoundingClientRect().top + gradient.offsetHeight / 2.0 + scroll;
+
+    if (i < 3) {
+      scrollTrigger -= window.innerHeight / 1.5;
+    }
+    else {
+      scrollTrigger -= window.innerHeight;
+    }
 
     if (scroll > scrollTrigger) {
       hiddenElements.forEach((el) => el.classList.add("show"));
     }
+    else {
+      hiddenElements.forEach((el) => el.classList.remove("show"));
+    }
   }
-  */
-
   
+
+  /*
   hiddenElements1 = document.querySelectorAll(".hidden1");
   hiddenElements2 = document.querySelectorAll(".hidden2");
   hiddenElements3 = document.querySelectorAll(".hidden3");
   //hiddenElements = document.getElementsByClassName("hidden");
 
   gradient1 = document.querySelector("#gradient1");
-  scrollTrigger1 = gradient1.getBoundingClientRect().top + gradient1.offsetHeight / 2.0 + scroll - window.innerHeight / 1.8;
+  scrollTrigger1 = gradient1.getBoundingClientRect().top + gradient1.offsetHeight / 2.0 + scroll - window.innerHeight / 1.5;
   //gradient1.innerHTML = `${scroll} / ${scrollTrigger1}`;
 
   gradient2 = document.querySelector("#gradient2");
-  scrollTrigger2 = gradient2.getBoundingClientRect().top + gradient2.offsetHeight / 2.0 + scroll - window.innerHeight / 1.8;
+  scrollTrigger2 = gradient2.getBoundingClientRect().top + gradient2.offsetHeight / 2.0 + scroll - window.innerHeight / 1.5;
   //gradient2.innerHTML = `${scroll} / ${scrollTrigger2}`;
 
   gradient3 = document.querySelector("#gradient3");
@@ -73,6 +82,7 @@ function onScroll() {
   else {
     hiddenElements3.forEach((el) => el.classList.remove("show"));
   }
+  */
 }
 
 function moveDown() {

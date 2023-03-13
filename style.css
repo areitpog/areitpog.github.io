@@ -256,3 +256,13 @@ section {
   transform: translateX(0);
   transition: all 0.2s ease calc(80ms * var(--order));
 }
+.audiotext {
+  position: absolute;
+  background-color: #00000099;
+  font-size: 12px;
+  margin-top: -1.3em;
+}
+.music {
+  display: inline-block;
+  padding-bottom: 16px;
+}
