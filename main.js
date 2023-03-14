@@ -24,11 +24,15 @@ function onScroll() {
     gradient = document.querySelector(`#gradient${i}`);
     scrollTrigger = gradient.getBoundingClientRect().top + gradient.offsetHeight / 2.0 + scroll;
 
-    if (i < 3) {
-      scrollTrigger -= window.innerHeight / 1.5;
-    }
-    else {
-      scrollTrigger -= window.innerHeight;
+    switch (i) 
+    {
+      case 1:
+        scrollTrigger -= window.innerHeight / 1.5;
+        break;
+      case 2:
+        scrollTrigger -= gradient.offsetHeight / 2.0 - window.innerHeight / 2.0;
+      case 3:
+        scrollTrigger -= window.innerHeight;
     }
 
     if (scroll > scrollTrigger) {
