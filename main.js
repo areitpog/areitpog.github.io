@@ -27,7 +27,7 @@ function onScroll() {
     switch (i) 
     {
       case 1:
-        scrollTrigger -= window.innerHeight / 1.1;
+        scrollTrigger -= window.innerHeight / 0.8;
         break;
       case 2:
         scrollTrigger -= gradient.offsetHeight / 2.0 - window.innerHeight / 2.0;
